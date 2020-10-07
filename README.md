@@ -1,4 +1,6 @@
-Preview URL: https://developer-t2.github.io/learn-twitter/#/
+## Preview and Create React App
+
+[Preview](https://developer-t2.github.io/learn-twitter/#/) the deliverables of this project.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
