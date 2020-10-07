@@ -6,20 +6,6 @@ const Profile = ({ user, updateUser }) => {
   const [newDisplayName, setNewDisplayName] = useState(user.displayName);
   const history = useHistory();
 
-  // const getTwits = useCallback(async () => {
-  //   const twits = await store
-  //     .collection('twits')
-  //     .where('uid', '==', user.uid)
-  //     .orderBy('createdAt')
-  //     .get();
-
-  //   console.log(twits.docs.map((doc) => doc.data()));
-  // }, [user.uid]);
-
-  // useEffect(() => {
-  //   getTwits();
-  // }, [getTwits]);
-
   const onLogoutClick = useCallback(async () => {
     try {
       await auth.signOut();
@@ -57,7 +43,7 @@ const Profile = ({ user, updateUser }) => {
         <input type="text" placeholder="Display Name" value={newDisplayName} onChange={onChange} />
         <button type="submit">Update Profile</button>
       </form>
-      <button onClick={onLogoutClick}>로그아웃</button>
+      <button onClick={onLogoutClick}>Logout</button>
     </>
   );
 };

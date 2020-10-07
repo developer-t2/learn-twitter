@@ -8,14 +8,24 @@ const Home = ({ user }) => {
   const [twits, setTwits] = useState([]);
 
   useEffect(() => {
-    store.collection('twits').onSnapshot((snapshot) => {
-      setTwits(
-        snapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
+    store
+      .collection('twits')
+      .orderBy('createdAt', 'desc')
+      .onSnapshot(
+        (snapshot) => {
+          setTwits(
+            snapshot.docs.map((doc) => ({
+              ...doc.data(),
+              id: doc.id,
+            }))
+          );
+        },
+        (err) => {
+          if (err.code !== 'permission-denied') {
+            console.error(err.message);
+          }
+        }
       );
-    });
   }, []);
 
   return (

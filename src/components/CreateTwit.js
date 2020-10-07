@@ -9,6 +9,7 @@ const CreateTwit = ({ user }) => {
   const onSubmit = useCallback(
     async (e) => {
       e.preventDefault();
+      e.target[1].value = null;
 
       let imageUrl = null;
 
@@ -45,17 +46,24 @@ const CreateTwit = ({ user }) => {
     [setTwit]
   );
 
+  const onFileClick = useCallback((e) => {
+    e.target.value = null;
+  }, []);
+
   const onFileChange = useCallback((e) => {
     const { files } = e.target;
-    const reader = new FileReader();
 
-    reader.readAsDataURL(files[0]);
+    if (files.length !== 0) {
+      const reader = new FileReader();
 
-    reader.addEventListener('loadend', (e) => {
-      const { result } = e.currentTarget;
+      reader.readAsDataURL(files[0]);
 
-      setImageFile(result);
-    });
+      reader.addEventListener('loadend', (e) => {
+        const { result } = e.currentTarget;
+
+        setImageFile(result);
+      });
+    }
   }, []);
 
   const onClearClick = useCallback(() => {
@@ -72,7 +80,7 @@ const CreateTwit = ({ user }) => {
         value={twit}
         onChange={onChange}
       />
-      <input type="file" accept="image/*" onChange={onFileChange} />
+      <input type="file" accept="image/*" onClick={onFileClick} onChange={onFileChange} />
       <button type="submit">Twit</button>
 
       {imageFile && (

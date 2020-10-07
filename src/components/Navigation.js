@@ -7,12 +7,12 @@ const Navigation = ({ user }) => {
       <ul>
         <li>
           <Link to="/" replace>
-            홈
+            Home
           </Link>
         </li>
         <li>
           <Link to="/profile" replace>
-            {user.displayName} 프로필
+            {user.displayName}'s Profile
           </Link>
         </li>
       </ul>

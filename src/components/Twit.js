@@ -36,7 +36,10 @@ const Twit = ({ twit, isOwner }) => {
     if (isDelete) {
       try {
         await store.doc(`twits/${twit.id}`).delete();
-        await storage.refFromURL(twit.imageUrl).delete();
+
+        if (twit.imageUrl) {
+          await storage.refFromURL(twit.imageUrl).delete();
+        }
       } catch (err) {
         console.error(err.message);
       }
