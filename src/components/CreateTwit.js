@@ -68,6 +68,7 @@ const CreateTwit = ({ user }) => {
         type="text"
         placeholder="What's on your mind?"
         maxLength={120}
+        required
         value={twit}
         onChange={onChange}
       />
