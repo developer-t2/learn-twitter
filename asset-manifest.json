@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/learn-twitter/static/js/main.c291bd49.chunk.js",
-    "main.js.map": "/learn-twitter/static/js/main.c291bd49.chunk.js.map",
+    "main.js": "/learn-twitter/static/js/main.b5079b22.chunk.js",
+    "main.js.map": "/learn-twitter/static/js/main.b5079b22.chunk.js.map",
     "runtime-main.js": "/learn-twitter/static/js/runtime-main.211407e6.js",
     "runtime-main.js.map": "/learn-twitter/static/js/runtime-main.211407e6.js.map",
     "static/js/2.698b35eb.chunk.js": "/learn-twitter/static/js/2.698b35eb.chunk.js",
     "static/js/2.698b35eb.chunk.js.map": "/learn-twitter/static/js/2.698b35eb.chunk.js.map",
     "index.html": "/learn-twitter/index.html",
-    "precache-manifest.605929b4796a0309070b17c971ab5be4.js": "/learn-twitter/precache-manifest.605929b4796a0309070b17c971ab5be4.js",
+    "precache-manifest.02c1c0ab6ea6ddc2307dcecf59f512d8.js": "/learn-twitter/precache-manifest.02c1c0ab6ea6ddc2307dcecf59f512d8.js",
     "service-worker.js": "/learn-twitter/service-worker.js",
     "static/js/2.698b35eb.chunk.js.LICENSE.txt": "/learn-twitter/static/js/2.698b35eb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.211407e6.js",
     "static/js/2.698b35eb.chunk.js",
-    "static/js/main.c291bd49.chunk.js"
+    "static/js/main.b5079b22.chunk.js"
   ]
 }
